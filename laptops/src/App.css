@@ -37,15 +37,9 @@
   }
 }
 
-.kollane {
-  color: rgba(221, 221, 42, 0.87);
-}
-
-.roheline {
-  color: rgb(3, 71, 3);
-}
-
-.aktiivne-Keel {
-  text-decoration: underline;
-  background-color: darkgray;
+.avaleht-text {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
 }

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 
 function Seaded() {
 
+   
     const[keel, uuendaKeel] = useState(localStorage.getItem("keel") || "est");
     const emailViide = useRef(); //useRef-st alati umport
     const telefonViide = useRef(); //alati inputi külge
@@ -54,9 +55,9 @@ function Seaded() {
         <button onClick={muudaKeelEst}>Eesti keelseks</button>
         <button onClick={muudaKeelEng}>to English</button>
         <button onClick={muudaKeelRus}>Vene keelseks</button>
-        {keel === "est" && <div>Leht on eestikeelne</div>}
-        {keel === "eng" && <div>Page is in English</div>}
-        {keel === "rus" && <div>Leht on venekeelne</div>}
+        {keel === "est" && <div className={keel === "est" ? "aktiivne-Keel" : undefined}>Leht on eestikeelne</div>}
+        {keel === "eng" && <div className={keel === "eng" ? "aktiivne-Keel" : undefined}>Page is in English</div>}
+        {keel === "rus" && <div className={keel === "rus" ? "aktiivne-Keel" : undefined}>Leht on venekeelne</div>}
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Ostukorv from './pages/Ostukorv';
 import LisaToode from './pages/LisaToode';
 import Seaded from './pages/Seaded';
 import Meist from './pages/Meist';
+import Kontakt from './pages/Kontakt';
 
 // HTML elemente on 2 erinevat:
 // 1. algus ja lõpu tag, lõpp on kaldkriipsuga tag nimetuse ees
@@ -37,6 +38,10 @@ function App() {
       <button className="nupp">Meist</button>
       </Link>
 
+      <Link to="/kontakt">
+      <button className="nupp">Kontakt</button>
+      </Link>
+
       {/* localhost:3000/avaleht */}
       <Routes>
         <Route path="" element={ <Avaleht/>}/>
@@ -44,6 +49,7 @@ function App() {
         <Route path="lisa-toode" element={ <LisaToode/> }/>
         <Route path="seaded" element={ <Seaded /> }/>
         <Route path="meist" element={ <Meist /> }/>
+        <Route path="kontakt" element={ <Kontakt /> }/>
         
       </Routes>
 

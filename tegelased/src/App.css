@@ -36,16 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.kollane {
-  color: rgba(221, 221, 42, 0.87);
-}
-
-.roheline {
-  color: rgb(3, 71, 3);
-}
-
-.aktiivne-Keel {
-  text-decoration: underline;
-  background-color: darkgray;
-}
