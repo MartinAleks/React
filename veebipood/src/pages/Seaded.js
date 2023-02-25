@@ -4,7 +4,7 @@ function Seaded() {
 
    
     const[keel, uuendaKeel] = useState(localStorage.getItem("keel") || "est");
-    const emailViide = useRef(); //useRef-st alati umport
+    const emailViide = useRef(); //useRef-st alati import
     const telefonViide = useRef(); //alati inputi külge
     const aadressViide = useRef(); //viide === reference
 

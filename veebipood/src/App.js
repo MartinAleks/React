@@ -6,6 +6,7 @@ import LisaToode from './pages/LisaToode';
 import Seaded from './pages/Seaded';
 import Meist from './pages/Meist';
 import Kontakt from './pages/Kontakt';
+import { useState } from 'react';
 
 // HTML elemente on 2 erinevat:
 // 1. algus ja lõpu tag, lõpp on kaldkriipsuga tag nimetuse ees
@@ -14,32 +15,38 @@ import Kontakt from './pages/Kontakt';
 //  kui me teame ette, et midagi kunagi kahe tagi vahele
 // pole mõtet kirjutada
 
-function App() {
+function App() {                          // ????????????
+  const [aktiivneURL, uuendaAktiivneURL] = useState(window.location.href.split("localhost:3000")[1]);
+  const [VeebisaidiVarv, uuendaVeebisaidiVarv] = useState("light");
+
+
   return (
-    <div className="App">
+    <div className = {VeebisaidiVarv === "dark" ? "dark-mode" : "light-mode"}>
+      <button onClick={() => uuendaVeebisaidiVarv("dark")}>Dark mode</button>
+      <button onClick={() => uuendaVeebisaidiVarv("light")}>Light mode</button>
       <Link to="/">
-      <img src="https://i.pinimg.com/550x/d2/50/c9/d250c95a44debaec2c4239ff486164bc.jpg" alt="Italian Trulli"/>
+      <img className="pilt"  onClick={() => uuendaAktiivneURL("/")} src="https://i.pinimg.com/550x/d2/50/c9/d250c95a44debaec2c4239ff486164bc.jpg" alt="Italian Trulli"/>
       </Link>
 
       
       <Link to="/ostukorv">
-      <button className="nupp">Ostukorv</button>
+      <button className={aktiivneURL === "/ostukorv" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/ostukorv")}>Ostukorv</button>
       </Link>
 
       <Link to="/lisa-toode">
-      <button className="nupp">Lisa toode</button>
+      <button className={aktiivneURL === "/lisa-toode" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/lisa-toode")}>Lisa toode</button>
       </Link>
 
       <Link to="/seaded">
-      <button className="nupp">Seaded</button>
+      <button className={aktiivneURL === "/seaded" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/seaded")}>Seaded</button>
       </Link>
 
       <Link to="/meist">
-      <button className="nupp">Meist</button>
+      <button className={aktiivneURL === "/meist" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/meist")}>Meist</button>
       </Link>
 
       <Link to="/kontakt">
-      <button className="nupp">Kontakt</button>
+      <button className={aktiivneURL === "/kontakt" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/kontakt")}>Kontakt</button>
       </Link>
 
       {/* localhost:3000/avaleht */}

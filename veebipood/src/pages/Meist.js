@@ -16,10 +16,14 @@ function Meist() {
       Meie telefon: {telefon} 
       { telefon.startsWith("+372") === false && <button onClick={() => uuendaTelefoni("+372" + telefon)}>Lisa suunakood</button>}
       <br />
-      Meie aadress: {aadress}
+      {/*                             A                    a */}
+      <span className={aadress.charAt(0)=== aadress.charAt(0).toLowerCase ? "kollane" : "roheline"}>Meie aadress: {aadress}</span>
       <button onClick={() => uuendaAadressi(aadress.toUpperCase())}>Aadress suurteks tähtedeks</button>
       <button onClick={() => uuendaAadressi(aadress.toLowerCase())}>Aadress väikesteks tähtedeks</button>
       <br />
+
+
+      
       <div>{message}</div>
       <button onClick={() => määraMessage("Selleks saada meile e-mail jobs@html-css-com")}>Kandideeri tööle</button>
       <button onClick={() => määraMessage("Meil on 10 töötajat, kelle info ilmub veebilehele lähiajal")}>Vaata meie töötajaid</button>
