@@ -6,6 +6,7 @@ import LisaToode from './pages/LisaToode';
 import Seaded from './pages/Seaded';
 import Meist from './pages/Meist';
 import Kontakt from './pages/Kontakt';
+import Poed from './pages/Poed';
 import { useState } from 'react';
 
 // HTML elemente on 2 erinevat:
@@ -18,6 +19,7 @@ import { useState } from 'react';
 function App() {                          // ????????????
   const [aktiivneURL, uuendaAktiivneURL] = useState(window.location.href.split("localhost:3000")[1]);
   const [VeebisaidiVarv, uuendaVeebisaidiVarv] = useState("light");
+  // KODUS 
 
 
   return (
@@ -49,6 +51,10 @@ function App() {                          // ????????????
       <button className={aktiivneURL === "/kontakt" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/kontakt")}>Kontakt</button>
       </Link>
 
+      <Link to="/poed">
+      <button className={aktiivneURL === "/poed" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/poed")}>Poed</button>
+      </Link>
+
       {/* localhost:3000/avaleht */}
       <Routes>
         <Route path="" element={ <Avaleht/>}/>
@@ -57,6 +63,7 @@ function App() {                          // ????????????
         <Route path="seaded" element={ <Seaded /> }/>
         <Route path="meist" element={ <Meist /> }/>
         <Route path="kontakt" element={ <Kontakt /> }/>
+        <Route path="poed" element={ <Poed /> }/>
         
       </Routes>
 
