@@ -8,6 +8,10 @@ import Meist from './pages/Meist';
 import Kontakt from './pages/Kontakt';
 import Poed from './pages/Poed';
 import { useState } from 'react';
+import Tooted from './pages/Tooted';
+import HaldaTooted from './pages/HaldaTooted';
+import MuudaToode from './pages/MuudaToode';
+import YksikToode from './pages/YksikToode';
 
 // HTML elemente on 2 erinevat:
 // 1. algus ja lõpu tag, lõpp on kaldkriipsuga tag nimetuse ees
@@ -54,6 +58,12 @@ function App() {                          // ????????????
       <Link to="/poed">
       <button className={aktiivneURL === "/poed" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/poed")}>Poed</button>
       </Link>
+      <Link to="/tooted">
+      <button className={aktiivneURL === "/tooted" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/tooted")}>Tooted</button>
+      </Link>
+      <Link to="/halda-tooted">
+      <button className={aktiivneURL === "/halda-tooted" ? "aktiivne-url" : undefined} onClick={() => uuendaAktiivneURL("/halda-tooted")}>Halda Tooteid</button>
+      </Link>
 
       {/* localhost:3000/avaleht */}
       <Routes>
@@ -64,6 +74,10 @@ function App() {                          // ????????????
         <Route path="meist" element={ <Meist /> }/>
         <Route path="kontakt" element={ <Kontakt /> }/>
         <Route path="poed" element={ <Poed /> }/>
+        <Route path="tooted" element={ <Tooted /> }/>
+        <Route path="halda-tooted" element={ <HaldaTooted /> }/>
+        <Route path="muuda/:index" element={ <MuudaToode/> }/>
+        <Route path="toode/:jrkNr" element={ <YksikToode/> }/>
         
       </Routes>
 
