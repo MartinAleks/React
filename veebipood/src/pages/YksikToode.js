@@ -5,12 +5,18 @@ import tootedFailist from "../data/tooted.json"
 function YksikToode() {
     //localhost:3000/toode/jrkNr
     //localhost:3000/toode <-- ei satuta
-    const { jrkNr } = useParams();
+    const { jrkNr } = useParams(); // useState, useRef, useParams
     const leitud = tootedFailist[jrkNr];
   return (
     <div>
-        {jrkNr}
-        {leitud}
+        {/* {jrkNr} */}
+        {leitud === undefined && <div>Toodet ei leitud!</div>}
+        {leitud !== undefined && 
+          <div>
+            <div>{leitud.nimi}</div>
+            <div>{leitud.hind} 000 €</div>
+            <img src={leitud.pilt} alt="" />
+          </div>}
     </div>
   )
 }

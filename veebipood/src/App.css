@@ -73,3 +73,18 @@
   height: 100%;
   min-height: 100vh;
 }
+
+.pilt{
+  height: 250px;
+  width: 400px;
+}
+
+.aktiivne-toode {
+  border: 1px solid green;
+  background-color: rgb(165, 211, 165);
+}
+
+.mitteaktiivne-toode {
+  border: 1px solid red;
+  background-color: rgb(224, 187, 187);
+}

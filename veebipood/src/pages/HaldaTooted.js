@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import tootedFailist from "../data/tooted.json";
 
 
@@ -11,13 +12,20 @@ function HaldaTooted() {
     }
     
 
-
+  // indexi (järjekorranumbri) pean kaasa saatma kui muudan või kustutan
   return (
     <div>
         {tooted.map((el, ix) => 
-        <div key={ix}>
-            {el}
+        <div key={ix} className={el.aktiivne === true ? "aktiivne-toode" : "mitteaktiivne-toode"}>
+            <img className="pilt" src={el.pilt} alt="" />
+              <div>{el.pilt}</div>
+              <div>{el.nimi}</div>
+              <div>{el.hind} 000 €</div>
+              {/* <div>{el.aktiivne + 0}</div> */}
+            {el.aktiivne === true && <div>Aktiivne</div>}
+            {el.aktiivne === false && <div>Mitteaktiivne</div>}
             <button onClick={() => kustuta(ix)}>x</button>
+            <Link to={"/muuda/" + ix}><button>Muuda</button></Link>
             </div>)}
     </div>
   )

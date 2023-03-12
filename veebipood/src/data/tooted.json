@@ -1,1 +1,9 @@
-["Nobe", "Tesla", "BMW"]
+[
+    {"nimi":"Nobe", "hind" : 67, "aktiivne": true, "pilt": "https://nobecars.com/wp-content/uploads/2022/01/Untitled-2-5-1024x473.png"},
+    {"nimi":"Tesla", "hind" : 87, "aktiivne": true, "pilt": "https://www.pngall.com/wp-content/uploads/11/Tesla-Model-S-PNG-Pic.png"},
+    {"nimi":"Nissan", "hind" : 27, "aktiivne": true, "pilt": "https://www.pngmart.com/files/22/Nissan-Leaf-Transparent-PNG.png"},
+    {"nimi":"Toyota", "hind" : 37, "aktiivne": true, "pilt": "https://www.pngplay.com/wp-content/uploads/8/Red-Toyota-Car-PNG-HD-Quality.png"},
+    {"nimi":"BMW", "hind" : 40, "aktiivne": false, "pilt": "https://purepng.com/public/uploads/large/purepng.com-bmw-m4-evo-aero-white-carcarbmwvehicletransport-961524659690tuoor.png"},
+    {"nimi":"Bentley", "hind" : 60, "aktiivne": false, "pilt": "https://i.pinimg.com/originals/ce/f8/da/cef8daa283f21c010fd7b59859eb7a02.png"}
+]
+
