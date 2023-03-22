@@ -8,6 +8,8 @@ import { useRef, useState } from 'react';
 import Seaded from './pages/Seaded';
 import Books from './pages/Books';
 import Numbrid from './pages/Numbrid';
+import LisaUudis from './pages/LisaUudis';
+import HaldaUudiseid from './pages/HaldaUudiseid';
 
 function App() {
   const [sisselogitud, muudaSisselogitud] = useState("ei");
@@ -61,6 +63,12 @@ const logiValja = () => {
       <Link to="/numbrid">
         <button>Numbrid</button>
       </Link>
+      <Link to="/lisa-uudis">
+        <button>Lisa uudis</button>
+      </Link>
+      <Link to="/halda">
+        <button>Halda uudiseid</button>
+      </Link>
       <Routes>
         <Route path='books' element={ <Books />} />
         <Route path='' element={ <Avaleht />} />
@@ -68,6 +76,8 @@ const logiValja = () => {
         <Route path='kontakt' element={ <Kontakt />} />
         <Route path='meist' element={ <Meist />} />
         <Route path='numbrid' element={ <Numbrid />} />
+        <Route path='lisa-uudis' element={ <LisaUudis /> } />
+        <Route path='halda' element = { <HaldaUudiseid /> } />
       </Routes>
    
     <Link to="/seaded">
