@@ -1,0 +1,117 @@
+[
+    {
+      "number": 44,
+      "name": "Lewis Hamilton",
+      "team": "Mercedes",
+      "contractEnd": 2023
+    },
+    {
+      "number": 33,
+      "name": "Max Verstappen",
+      "team": "Red Bull",
+      "contractEnd": 2028
+    },
+    {
+      "number": 16,
+      "name": "Charles Leclerc",
+      "team": "Ferrari",
+      "contractEnd": 2024
+    },
+    {
+      "number": 4,
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "contractEnd": 2025
+    },
+    {
+      "number": 31,
+      "name": "Esteban Ocon",
+      "team": "Alpine",
+      "contractEnd": 2024
+    },
+    {
+      "number": 10,
+      "name": "Pierre Gasly",
+      "team": "AlphaTauri",
+      "contractEnd": "multi-year"
+    },
+    {
+      "number": 14,
+      "name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "contractEnd": "multi-year"
+    },
+    {
+      "number": 11,
+      "name": "Sergio Perez",
+      "team": "Red Bull",
+      "contractEnd": 2024
+    },
+    {
+      "number": 18,
+      "name": "Lance Stroll",
+      "team": "Aston Martin",
+      "contractEnd": "end of 2023"
+    },
+    {
+      "number": 63,
+      "name": "George Russell",
+      "team": "Mercedes",
+      "contractEnd": "multi-year"
+    },
+    {
+      "number": 20,
+      "name": "Kevin Magnussen",
+      "team": "Haas",
+      "contractEnd": "multi-year"
+    },
+    {
+      "number": 22,
+      "name": "Yuki Tsunoda",
+      "team": "AlphaTauri",
+      "contractEnd": 2023
+    },
+    {
+      "number": 77,
+      "name": "Valtteri Bottas",
+      "team": "Alfa Romeo",
+      "contractEnd": "multi-year"
+    },
+    {
+      "number": 81,
+      "name": "Oscar Piastri",
+      "team": "McLaren",
+      "contractEnd": 2024
+    },
+    {
+      "number": 27,
+      "name": "Nico Hulkenberg",
+      "team": "Haas",
+      "contractEnd": "2023"
+    },
+    {
+      "number": 23,
+      "name": "Alex Albon",
+      "team": "Williams",
+      "contractEnd": "multi-year"
+    },
+    {
+      "number": 21,
+      "name": "Nyck de Vries",
+      "team": "AlphaTauri",
+      "contractEnd": 2023
+    },
+    {
+      "number": 24,
+      "name": "Guanyu Zhou",
+      "team": "Alfa Romeo",
+      "contractEnd": 2023
+    },
+    {
+      "number": 2,
+      "name": "Logan Sargeant",
+      "team": "Williams",
+      "contractEnd": null
+    }
+  ]
+  

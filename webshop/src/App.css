@@ -16,3 +16,43 @@
   height: 300px;
 }
 
+.active {
+  border: 1px solid green;
+  background-color: rgb(213, 250, 213);
+}
+
+.inactive{
+  border: 1px solid red;
+  background-color: rgb(241, 210, 210);
+}
+
+.center {
+  text-align: center;
+  margin: 50px;
+}
+
+.categories {
+  width: 200px;
+  margin: auto;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}

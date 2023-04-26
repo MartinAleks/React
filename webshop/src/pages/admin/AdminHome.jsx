@@ -8,7 +8,7 @@ function AdminHome() {
   // [] - peab olema täpselt nii palju {} - meie valik kui palju
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="center">
       <Button as={Link} to="/admin/maintain-shops" variant="primary">{t("maintain-shops")}</Button>{' '}
       <Button as={Link} to="/admin/maintain-categories" variant="secondary">{t("maintain-categories")}</Button>{' '}
       <Button as={Link} to="/admin/add-product" variant="success">{t("add-product")}</Button>{' '}

@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+table th:first-child {
+  font-weight: bold;
+}
+
+
+
+
+/*TODO: Set the font weight of the first table column to bold*/

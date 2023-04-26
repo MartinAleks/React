@@ -10,6 +10,7 @@ import Books from './pages/Books';
 import Numbrid from './pages/Numbrid';
 import LisaUudis from './pages/LisaUudis';
 import HaldaUudiseid from './pages/HaldaUudiseid';
+import KasutajaPostitus from './pages/KasutajaPostitus';
 
 function App() {
   const [sisselogitud, muudaSisselogitud] = useState("ei");
@@ -69,6 +70,7 @@ const logiValja = () => {
       <Link to="/halda">
         <button>Halda uudiseid</button>
       </Link>
+      
       <Routes>
         <Route path='books' element={ <Books />} />
         <Route path='' element={ <Avaleht />} />
@@ -78,15 +80,16 @@ const logiValja = () => {
         <Route path='numbrid' element={ <Numbrid />} />
         <Route path='lisa-uudis' element={ <LisaUudis /> } />
         <Route path='halda' element = { <HaldaUudiseid /> } />
+        <Route path='kasutaja-postitus/:kasutajaId' element={ <KasutajaPostitus />} />
       </Routes>
    
     <Link to="/seaded">
       <button>Seadetesse</button>
     </Link>
 
-    <Routes>
+    {/* <Routes>
       <Route path='seaded' element= { <Seaded /> } />
-    </Routes>
+    </Routes> */}
     </div>
   );
 }

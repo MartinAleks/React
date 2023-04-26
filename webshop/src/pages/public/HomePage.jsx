@@ -1,73 +1,73 @@
-import React, { useEffect, useState } from 'react'
-// import productsFromFile from "../../data/products.json"
-import categoriesFromFile from "../../data/categories.json"
-// import cartFromFile from "../../data/cart.json"
-//import { Link } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
+import config from "../../data/config.json"
+import { Spinner } from 'react-bootstrap';
+import { CartSumContext } from '../../store/CartSumContext';
+import SortButtons from '../../components/home/SortButtons';
+import FilterBar from '../../components/home/FilterBar';
+import "../../css/HomePage.css";
 
 
 function HomePage() {
+  const [dbProducts, setDbProducts] = useState([]); // veendun, et siin oleks alati andmebaasist (487 tk)
   const [products, setProducts] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [categories, setCategories] = useState([]);
+  const { cartSum, setCartSum } = useContext(CartSumContext);
 
   useEffect(() => {
-    fetch("https://martinshop-default-rtdb.europe-west1.firebasedatabase.app/products.json")
+    fetch(config.categoriesDbUrl)
       .then(res => res.json())
-      .then(json => setProducts(json));
+      .then(json => setCategories(json || []))
+
+    fetch(config.productsDbUrl) // --> URL tuleb failist
+      .then(res => res.json())
+      .then(json => {
+        setProducts(json || []);
+        setDbProducts(json || []);
+        setLoading(false);
+      });
   }, []);
 
   const addToCart = (productClicked) => {
     const cartLS = JSON.parse(localStorage.getItem("cart")) || [];
     const index = cartLS.findIndex(cartProduct => cartProduct.product.id === productClicked.id);
-    if (index !== -1) {  
+    if (index !== -1) {
       // suurendan kogust --> Tegemist on MUUTMISEGA
       // muudetakse elemente indexi (järjekorranumbri) alusel
       cartLS[index].quantity = cartLS[index].quantity + 1;
-    } else { 
+    } else {
       // lisan lõppu kogusega 1
-      cartLS.push({product: productClicked, quantity: 1});
+      cartLS.push({ product: productClicked, quantity: 1 });
     }
-  
+    setCartSum(Number(cartSum) + productClicked.price)
     localStorage.setItem("cart", JSON.stringify(cartLS));
-    // localStorage.getItem("võti"); // VÕTA VÄÄRTUS LOCALSTORAGE-st
-    // localStorage.setItem("võti", "uus_väärtus"); // PANE VÄÄRTUS LOCALSTORAGE-sse
-
-    // 1. Võtame kogu vana ostukorvi seisu
-    // 2. tuleb võtta jutumärgid maha (siiamaani - keel, telefon, email, aadress, veebilehe_varv)
-    // 3. lisame ostukorvi ühe toote juurde
-    // 4. panna jutumärgid tagasi peale
-    // 5. paneme kogu ostukorvi sisu tagasi LocalStoragesse
   }
 
-  const filterByCategory = (categoryClicked) => {
-    const result = products.filter(element => element.category === categoryClicked);
-    setProducts(result);
+
+
+  if (isLoading === true) {
+    return <div className="center"><Spinner /></div>
   }
-  
+
   return (
     <div>
-      {/* <button onClick={() => filterByCategory("camping")}>camping</button>
-      <button onClick={() => filterByCategory("belts")}>belts</button> */}
-      {categoriesFromFile.map(element => <button key={element} onClick={() => filterByCategory(element)}>{element}</button>)}
+      <FilterBar dbProducts={dbProducts} setProducts={setProducts} categories={categories} />
       <div>{products.length} pcs</div>
-      {/* KOJU: sorteeri nupud
-        sortAZ
-        sortZA
-        SortPriceAsc
-        SortPriceDesc
-      */}
-      {products.map(element => 
-        <div key={element.id}>
-          <img src={element.image} alt="" />
-          <div>{element.id}</div>
-          <div>{element.name}</div>
-          <div>{element.image}</div>
-          <div>{element.price}</div>
-          <div>{element.category}</div>
-          <div>{element.description}</div>
-          <div>{element.active}</div>
-          <Button variant="contained" onClick={() => addToCart(element)}>Add to cart</Button>
-        </div>
+      <SortButtons products={products} setProducts={setProducts} />
+      <div className='product-wrapper-home'>
+        {products.map(element =>
+          <div className="product-home" key={element.id}>
+            <Link to={"/product/" + element.id}>
+              <img src={element.image} alt="" />
+              <div>{element.name}</div>
+              <div>{element.price}</div>
+            </Link>
+            <Button variant="contained" onClick={() => addToCart(element)}>Add to cart</Button>
+          </div>
         )}
+      </div>
     </div>
   )
 }

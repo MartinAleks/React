@@ -27,7 +27,6 @@ const resources = {
       "maintain-categories" : "Halda kategooriaid",
       "add-product" : "Lisa toode",
       "maintain-products" : "Halda tooteid",
-
     }
   }
 };

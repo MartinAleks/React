@@ -1,0 +1,5 @@
+{
+    "productsDbUrl" : "https://martinshop-default-rtdb.europe-west1.firebasedatabase.app/products.json",
+    "categoriesDbUrl" : "https://martinshop-default-rtdb.europe-west1.firebasedatabase.app/categories.json",
+    "shopsDbUrl" : "https://martinshop-default-rtdb.europe-west1.firebasedatabase.app/shops.json"
+}

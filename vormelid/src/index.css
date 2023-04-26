@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(38, 41, 46);
+  color: rgb(20, 110, 190);
+  
+}
+
+.App {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 0 20px;
+}
+
+tr:hover {
+  cursor: pointer;
+  background-color: rgb(20, 110, 190);
+}
+
+.my-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.track-image {
+  max-width: 500px;
+  max-height: 500px;
+  color: rgb(178, 187, 196);
+}
+
+.tracks-list > div {
+  cursor: pointer;
+}
+
+.tracks-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.track-item {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.track-item:hover {
+  background-color: rgb(20, 110, 190);
+  border-color: #999;
+}
+
+.track-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: rgb(205, 218, 230);
+}
+
+.track-location {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: rgb(205, 218, 230);
+}
+
+.track-date {
+  font-size: 0.8rem;
+  color: rgb(205, 218, 230);
+  margin-bottom: 10px;
+}
+
+.track-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -60px; 
+  position: relative;
+}
+
+.container {
+  color: rgb(20, 110, 190);
+
+}
+
+table td {
+  position: relative;
+  color: rgb(205, 218, 230);
+}
+
+tr {
+  color: rgb(205, 218, 230);
+}
+
+td:hover{
+  color:rgb(20, 110, 190);
+}
+
+.number {
+  font-weight: bold;
+  color:rgb(20, 110, 190);
+}
+
+.table-container {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+}
+
+.driver-table-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.driver-image {
+  position: absolute;
+  left: 50px;
+  top: 300px;
+  width: 200px;
+}
+
+.Article {
+  
+  max-width: 800px; /* set the maximum width of the article container */
+  margin: 0 auto; /* set the left and right margin to auto to center the container */
+  padding: 20px; /* add some padding for spacing */
+  color: rgb(205, 218, 230);/* set the background color of the container */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  
+}
+
+.Article h2 {
+  font-size: 24px; /* set the font size for the article title */
+  margin-bottom: 10px; /* add some spacing between the title and the content */
+}
+
+.Article p {
+  font-size: 16px; /* set the font size for the article content */
+  line-height: 1.5; /* set the line height for better readability */
+  margin-bottom: 20px; /* add some spacing between the content and the next article */
+}
+
+.Article:hover {
+  
+    background-color: rgb(18, 88, 148);
+    border-color: #999;
+  
+}
+
+.Article button {
+  display: inline-block;
+  background-color: rgb(20, 110, 190);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Article button:hover {
+  background-color: rgb(20, 110, 190);
+}
+
+.Article img {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-radius: 10px;
+}
+
+
